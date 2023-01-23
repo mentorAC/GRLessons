@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor= ConsoleColor.Green;
             Console.WriteLine("Change Text");
+            Console.ResetColor();
         }
     }
 }
