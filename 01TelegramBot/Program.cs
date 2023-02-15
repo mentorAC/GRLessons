@@ -17,15 +17,17 @@ client.StartReceiving(
 Console.ReadLine();
 
 
-Task UpdateHandler(ITelegramBotClient bot,
+async Task UpdateHandler(ITelegramBotClient bot,
                    Update update,
                    CancellationToken cls)
 {
     var text = update.Message.Text;
     var user = update.Message.From;
-    Console.WriteLine($"User: {user.FirstName} text: {text}");
 
-    return Task.CompletedTask;
+    string msg = $"Hi!, {user.FirstName}, Your message: {text}";
+
+    //Console.WriteLine($"User: {user.FirstName} text: {text}");
+    await client.SendTextMessageAsync(user.Id, msg);
 }
 
 Task ErrorHandler(ITelegramBotClient bot,
