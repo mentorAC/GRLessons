@@ -34,6 +34,7 @@
             this.pbPipeUp = new System.Windows.Forms.PictureBox();
             this.pbPipeDown = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lGameOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPipeUp)).BeginInit();
@@ -86,12 +87,24 @@
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lGameOver
+            // 
+            this.lGameOver.AutoSize = true;
+            this.lGameOver.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lGameOver.Location = new System.Drawing.Point(185, 198);
+            this.lGameOver.Name = "lGameOver";
+            this.lGameOver.Size = new System.Drawing.Size(661, 159);
+            this.lGameOver.TabIndex = 4;
+            this.lGameOver.Text = "Game Over";
+            this.lGameOver.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(978, 654);
+            this.Controls.Add(this.lGameOver);
             this.Controls.Add(this.pbBird);
             this.Controls.Add(this.pbGround);
             this.Controls.Add(this.pbPipeDown);
@@ -116,5 +129,6 @@
         private PictureBox pbPipeUp;
         private PictureBox pbPipeDown;
         private System.Windows.Forms.Timer timer1;
+        private Label lGameOver;
     }
 }

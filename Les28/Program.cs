@@ -12,7 +12,8 @@ namespace Les28
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Form1());
-            Application.Run(new TimerForm());
+            //Application.Run(new TimerForm());
+            Application.Run(new Animation());
         }
     }
 }
